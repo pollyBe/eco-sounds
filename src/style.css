@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+}
+
+.preload {
+    position: absolute;
+    top: -9999px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  background-color: #2f2f55;
+}
+
+header {
+  padding: 15px 0;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 10%;
+}
+
+.link-img img {
+  width: 100%;
+}
+
+.track-name {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.track-name_item {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #9c8466;
+}
+
+.track-name_item:hover {
+  background-color: rgba(212, 193, 169, 0.2);
+}
+
+.track-name_item:active {
+  transform: scale(1.1 ease-in-out);
+}
+
+.current {
+  background-color: rgba(212, 193, 169, 0.2);
+}
+
+.player {
+  height: calc(100vh - 160px);
+  background-image: url(../assets/img/Caribbean+Sunset+IId.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s ease-in-out;
+}
+
+.player-wrap {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  display: flex;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 5;
+  padding: 0 30px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  align-items: center;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.play {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/svg/circle-play-regular.svg);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.5s ease;
+}
+
+.play-next {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/svg/angles-right-solid.svg);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.5s ease;
+
+}
+
+.play-prev {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/svg/angles-left-solid.svg);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.5s ease;
+}
+
+
+.active {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/svg/circle-pause-regular.svg);
+  background-color: transparent;
+  border: none;
+  transition:  0.5s ease;
+
+}
+
+footer {
+  padding: 15px 0;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.footer-info a {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #9c8466;
+  cursor: pointer;
+}
+
+.footer-info p {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #9c8466;
+}
+
+.info-name {
+  transition: 0.5s ease-in-out;
+}
+
+.info-name:hover {
+  color: #f0f8ff;
+}
+
+.footer-link {
+  cursor: pointer;
+  max-width: 10%;
+}
+
+.link-img {
+  width: 100%;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    max-width: 1024px;
+  }
+  .track-name {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 992px;
+  }
+  .track-name {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .track-name_item {
+    letter-spacing: 0px;
+    font-size: 14px;
+  }
+}
